@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_abcd_1753258856045
+  name: irshaq-Build-abcd-del
+  orgIdentifier: default
+  projectIdentifier: SFTY_Training
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: githubirshaq
+        repoName: abcd
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
