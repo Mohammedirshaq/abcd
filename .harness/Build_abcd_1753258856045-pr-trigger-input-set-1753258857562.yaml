@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_abcd_1753258856045-pr-trigger-input-set
+  identifier: Build_abcd_1753258856045prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: SFTY_Training
+  pipeline:
+    identifier: Build_abcd_1753258856045
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
